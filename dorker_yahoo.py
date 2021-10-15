@@ -8,11 +8,11 @@ import sys,os
 import time
 from tldextract import extract
 
-proxy_file = open("../socks4.txt", "r")
+proxy_file = open("socks4.txt", "r")
 proxies = proxy_file.readlines()
 proxy_file.close()
 
-usagents_file = open("../useragents.txt", "r")
+usagents_file = open("useragents.txt", "r")
 usagents = usagents_file.readlines()
 usagents_file.close()
 
@@ -194,6 +194,7 @@ for url, html, proxyresp ,code,error in results:
         x=1
     else:
         print("error fetching %r: %s" % (url + "=>", proxyresp))
+        ###
 
 
 
